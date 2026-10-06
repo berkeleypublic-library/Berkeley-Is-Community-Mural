@@ -15,618 +15,28 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Berkeley Is: A Community Mural at Berkeley Public Library">
 <meta property="og:description" content="The story of the Berkeley Public Library Community Mural: its process, its artists, and everyone who made it possible.">
-<meta property="og:image" content="images/mural-wall-2.png">
+<meta property="og:image" content="images/mural-wall-2.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Berkeley Is: A Community Mural at Berkeley Public Library">
 <meta name="twitter:description" content="The story of the Berkeley Public Library Community Mural: its process, its artists, and everyone who made it possible.">
-<meta name="twitter:image" content="images/mural-wall-2.png">
+<meta name="twitter:image" content="images/mural-wall-2.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Public+Sans:wght@400;500;600;700&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
-<style>
-/* ==========================================================================
-   Tokens — palette pulled from the mural itself
-   ========================================================================== */
-:root {
-  --clay:  #A63D2F;   /* manzanita bark — decorative fills, buttons */
-  --clay-dark: #7E2E22; /* headings, links, focus ring — 7.5:1+ on paper */
-  --leaf:  #5B7048;   /* grasses / manzanita leaves — decorative fills, borders */
-  --leaf-text: #425235; /* leaf-family text on light backgrounds — 6.9:1 on paper */
-  --leaf-deep: #3F4F30;  /* dark leaf background (child land acknowledgment) */
-  --leaf-light: #7C9463;
-  --gold:  #D9A441;   /* rising sun — decorative fills, borders, non-text only */
-  --gold-text: #7A4E14;   /* gold-family text on light backgrounds — 5.9:1 on paper */
-  --gold-on-dark: #FBEBC4; /* gold-family text on clay/leaf-deep — 5.3:1+ */
-  --bay:   #6D93A0;   /* quail / bay water */
-  --paper: #F1E8D6;   /* adobe / plaster wall */
-  --paper-deep: #E6D9BC;
-  --panel: #FBF6EC;   /* card surface */
-  --ink:   #2E241A;   /* text */
-  --ink-soft: #55483A;
+<link rel="stylesheet" href="styles.css">
 
-  --font-display: "Fraunces", "Iowan Old Style", serif;
-  --font-body: "Public Sans", -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-script: "Caveat", cursive;
-
-  --max: 1120px;
-  --radius: 14px;
-}
-
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
-}
-
-body {
-  margin: 0;
-  font-family: var(--font-body);
-  color: var(--ink);
-  background: var(--paper);
-  line-height: 1.6;
-  position: relative;
-  overflow-x: hidden;
-}
-
-.wrap {
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 0 28px;
-}
-
-h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; margin: 0 0 0.5em; color: var(--clay-dark); }
-p { margin: 0 0 1em; color: var(--ink-soft); }
-
-a { color: var(--clay-dark); }
-
-.eyebrow {
-  display: inline-block;
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: 0.78rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--leaf-text);
-  margin-bottom: 0.9em;
-}
-.eyebrow-light { color: var(--gold-text); }
-/* on dark section backgrounds, swap to the light-on-dark gold variant */
-.acknowledgment .eyebrow-light,
-.child-ack .eyebrow-light { color: var(--gold-on-dark); }
-
-.section-lede { max-width: 60ch; font-size: 1.1rem; }
-
-/* ==========================================================================
-   The creek — signature element, meanders the length of the page
-   ========================================================================== */
-.creek {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  height: 100%;
-  max-width: 1400px;
-  z-index: 0;
-  pointer-events: none;
-  opacity: 0.35;
-}
-#creek-path {
-  fill: none;
-  stroke: var(--bay);
-  stroke-width: 0.6;
-  stroke-linecap: round;
-  stroke-dasharray: 6 5;
-}
-
-/* ==========================================================================
-   Header
-   ========================================================================== */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  background: rgba(241, 232, 214, 0.9);
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid rgba(46, 36, 26, 0.08);
-}
-.header-inner { display: flex; align-items: center; justify-content: space-between; min-height: 64px; padding: 10px 0; position: relative; }
-.brand { display: flex; align-items: center; gap: 10px; font-family: var(--font-display); font-weight: 600; font-size: 1.15rem; color: var(--clay-dark); text-decoration: none; }
-.brand-logo { height: 68px; width: auto; display: block; }
-.site-nav { display: flex; gap: 22px; align-items: center; }
-.site-nav a { font-size: 0.92rem; font-weight: 600; text-decoration: none; color: var(--ink-soft); }
-.site-nav a:hover { color: var(--clay-dark); }
-.nav-cta {
-  background: var(--clay);
-  color: var(--panel) !important;
-  padding: 8px 16px;
-  border-radius: 999px;
-}
-.nav-cta:hover { background: var(--clay-dark); color: var(--panel) !important; }
-
-/* Listen gets its own gentle highlight, distinct from the primary Gratitude CTA */
-.nav-highlight {
-  color: var(--gold-text) !important;
-  background: rgba(217, 164, 65, 0.22);
-  padding: 6px 12px;
-  border-radius: 999px;
-}
-.nav-highlight:hover { background: rgba(217, 164, 65, 0.34); }
-
-.nav-toggle {
-  display: none;
-  width: 40px;
-  height: 40px;
-  border: none;
-  background: transparent;
-  border-radius: 8px;
-  cursor: pointer;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-}
-.nav-toggle:hover { background: rgba(46, 36, 26, 0.06); }
-.nav-toggle-bar {
-  display: block;
-  width: 22px;
-  height: 2.5px;
-  border-radius: 2px;
-  background: var(--ink);
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
-.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(2) { opacity: 0; }
-.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
-
-@media (max-width: 780px) {
-  .nav-toggle { display: flex; }
-  .site-nav {
-    position: absolute;
-    top: calc(100% + 1px);
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-    background: var(--panel);
-    border-bottom: 1px solid rgba(46, 36, 26, 0.1);
-    box-shadow: 0 12px 24px rgba(46, 36, 26, 0.12);
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: max-height 0.25s ease, opacity 0.2s ease;
-  }
-  .site-nav.is-open { max-height: 420px; opacity: 1; }
-  .site-nav a {
-    padding: 16px 28px;
-    border-bottom: 1px solid rgba(46, 36, 26, 0.06);
-    border-radius: 0;
-  }
-  .nav-cta, .nav-highlight { background: transparent !important; color: var(--clay-dark) !important; }
-  .nav-highlight { color: var(--gold-text) !important; }
-}
-
-/* ==========================================================================
-   Hero
-   ========================================================================== */
-.hero { position: relative; z-index: 1; padding: 84px 0 40px; }
-.hero-inner { max-width: 760px; }
-.hero-title {
-  font-size: clamp(2.6rem, 6vw, 4.6rem);
-  line-height: 1.02;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  margin-bottom: 0.4em;
-}
-.hero-title-sub {
-  font-style: italic;
-  font-weight: 400;
-  font-size: 0.42em;
-  color: var(--leaf-text);
-}
-.hero-lede { font-size: 1.2rem; max-width: 56ch; }
-.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 1.6em; }
-
-.btn {
-  display: inline-block;
-  padding: 13px 26px;
-  border-radius: 999px;
-  font-weight: 700;
-  font-size: 0.95rem;
-  text-decoration: none;
-  transition: transform 0.15s ease, background 0.15s ease;
-}
-.btn:hover { transform: translateY(-1px); }
-.btn-primary { background: var(--clay); color: var(--panel); }
-.btn-primary:hover { background: var(--clay-dark); color: var(--panel); }
-.btn-ghost { background: transparent; border: 1.5px solid var(--ink-soft); color: var(--ink); }
-
-.hero-frame {
-  margin: 48px 28px 0;
-  border-radius: var(--radius);
-  overflow: hidden;
-  background: var(--panel);
-  border: 1px solid rgba(46,36,26,0.08);
-}
-.hero-frame img { display: block; width: 100%; height: auto; }
-
-/* ==========================================================================
-   Placeholder frames (stand-ins for real photos/logos)
-   ========================================================================== */
-.placeholder-frame {
-  position: relative;
-  border: 2px dashed var(--leaf-light);
-  border-radius: var(--radius);
-  background: repeating-linear-gradient(135deg, rgba(91,112,72,0.06) 0 12px, rgba(91,112,72,0.02) 12px 24px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-.placeholder-frame::after {
-  content: attr(data-caption);
-  position: absolute;
-  bottom: 8px;
-  left: 8px;
-  right: 8px;
-  font-size: 0.68rem;
-  color: var(--ink-soft);
-  background: rgba(251, 246, 236, 0.85);
-  padding: 4px 8px;
-  border-radius: 6px;
-  line-height: 1.3;
-}
-.placeholder-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  color: var(--ink-soft);
-  font-weight: 600;
-  font-size: 0.95rem;
-}
-.placeholder-inner svg { width: 64px; height: auto; opacity: 0.7; }
-
-.placeholder-frame.small { aspect-ratio: 4/3; }
-.funder-logo { width: 220px; flex-shrink: 0; margin: 0; }
-.funder-logo img { display: block; width: 100%; height: auto; }
-
-/* real photo/artwork frames */
-.photo-card { margin: 0; border-radius: var(--radius); overflow: hidden; background: var(--panel); border: 1px solid rgba(46,36,26,0.08); }
-.photo-card .photo-window { aspect-ratio: 4/3; overflow: hidden; }
-.photo-card img { display: block; width: 100%; height: 100%; object-fit: cover; }
-.photo-card figcaption { padding: 12px 14px; font-size: 0.85rem; font-weight: 600; color: var(--ink-soft); }
-
-.wall-image { margin: 0; border-radius: var(--radius); overflow: hidden; border: 1px solid rgba(46,36,26,0.08); }
-.wall-image img { display: block; width: 100%; height: auto; }
-.wall-image.half { width: 50%; margin: 0 auto; }
-
-.artist-photo { width: 260px; flex-shrink: 0; margin: 0; }
-.artist-photo .photo-window { aspect-ratio: 4/3; overflow: hidden; border-radius: var(--radius); border: 1px solid rgba(46,36,26,0.08); }
-.artist-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
-.artist-photo figcaption { margin-top: 8px; font-size: 0.82rem; font-style: italic; color: var(--ink-soft); }
-figure.placeholder-frame.artist-photo { aspect-ratio: 3/4; }
-
-/* full-image variant: shows the whole piece at Hannah's photo height, uncropped */
-.artist-photo.full-image { width: auto; }
-.artist-photo.full-image .photo-window {
-  aspect-ratio: auto;
-  height: 195px; /* matches Hannah's 260px x 4:3 window */
-  width: auto;
-  overflow: visible;
-  border: none;
-  border-radius: 0;
-}
-.artist-photo.full-image img {
-  width: auto;
-  height: 100%;
-  object-fit: contain;
-  border-radius: var(--radius);
-  border: 1px solid rgba(46,36,26,0.08);
-}
-
-.partner-logo { width: 160px; flex-shrink: 0; margin: 0; }
-.partner-logo img { display: block; width: 100%; height: auto; border-radius: var(--radius); border: 1px solid rgba(46,36,26,0.08); }
-.partner-logo.wide { width: 680px; max-width: 100%; }
-
-.inline-artwork { margin: 0 0 22px; border-radius: var(--radius); overflow: hidden; border: 1px solid rgba(46,36,26,0.08); }
-.inline-artwork img { display: block; width: 100%; height: auto; }
-.inline-artwork figcaption { padding: 10px 14px; font-size: 0.82rem; font-style: italic; color: var(--ink-soft); background: var(--panel); }
-
-/* ==========================================================================
-   Land acknowledgment band
-   ========================================================================== */
-.acknowledgment {
-  position: relative; z-index: 1;
-  background: var(--clay);
-  color: var(--panel);
-  padding: 70px 0;
-  margin-top: 40px;
-}
-.ack-inner { max-width: 780px; }
-.ack-text { color: var(--panel); font-size: 1.15rem; }
-.ack-text strong { color: var(--gold-on-dark); }
-.say { font-family: var(--font-script); font-size: 1.15em; color: var(--panel); }
-.ack-credit { font-size: 0.9rem; color: var(--panel); }
-
-/* ==========================================================================
-   About
-   ========================================================================== */
-.about { position: relative; z-index: 1; padding: 80px 0 40px; }
-.about-inner { max-width: 720px; }
-.about-inner h2 { font-size: 2rem; }
-.about-inner p { font-size: 1.08rem; }
-
-/* ==========================================================================
-   Process
-   ========================================================================== */
-.process { position: relative; z-index: 1; padding: 40px 0 80px; }
-.process h2 { font-size: 2rem; }
-.process-gallery {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-  margin: 36px 0 44px;
-}
-@media (max-width: 1000px) { .process-gallery { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 560px) { .process-gallery { grid-template-columns: 1fr; } }
-
-.pull-quotes { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-@media (max-width: 800px) { .pull-quotes { grid-template-columns: 1fr; } }
-.pull-quote {
-  margin: 0;
-  padding: 26px 28px;
-  background: var(--panel);
-  border-left: 4px solid var(--gold);
-  border-radius: 0 var(--radius) var(--radius) 0;
-}
-.pull-quote p { font-family: var(--font-display); font-style: italic; font-size: 1.18rem; color: var(--ink); margin-bottom: 0.5em; }
-.pull-quote cite { font-style: normal; font-size: 0.85rem; font-weight: 700; color: var(--leaf-text); }
-
-/* ==========================================================================
-   Walls
-   ========================================================================== */
-.walls { position: relative; z-index: 1; padding: 40px 0 20px; }
-.walls > .wrap:first-child h2 { font-size: 2rem; }
-
-.wall-panel {
-  max-width: var(--max);
-  margin: 0 auto 70px;
-  padding: 0 28px;
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 44px;
-  align-items: center;
-}
-.wall-panel.reverse { direction: rtl; }
-.wall-panel.reverse > * { direction: ltr; }
-@media (max-width: 860px) {
-  .wall-panel, .wall-panel.reverse { grid-template-columns: 1fr; direction: ltr; }
-}
-
-.wall-number {
-  display: inline-block;
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: 1.05rem;
-  color: var(--gold-text);
-  margin-bottom: 0.3em;
-}
-.wall-copy h3 { font-size: 1.6rem; }
-.wall-copy em { color: var(--clay-dark); font-style: italic; }
-
-/* ==========================================================================
-   Artists
-   ========================================================================== */
-.artists { position: relative; z-index: 1; padding: 60px 0 20px; }
-.artists > .wrap:first-child h2 { font-size: 2rem; }
-
-.artist-card {
-  max-width: var(--max);
-  margin: 0 auto 64px;
-  padding: 0 28px;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 40px;
-}
-.artist-card.reverse { direction: rtl; }
-.artist-card.reverse > * { direction: ltr; }
-@media (max-width: 780px) {
-  .artist-card, .artist-card.reverse { grid-template-columns: 1fr; direction: ltr; }
-  .artist-photo { width: 100%; }
-}
-
-.artist-role { font-weight: 600; color: var(--leaf-text); font-size: 0.92rem; text-transform: uppercase; letter-spacing: 0.04em; }
-.artist-copy h3 { font-size: 1.7rem; margin-bottom: 0.2em; }
-
-.artist-note {
-  max-width: var(--max);
-  margin: 0 auto 40px;
-  padding: 0 28px;
-  font-style: italic;
-  color: var(--ink-soft);
-  font-size: 0.98rem;
-}
-
-.btn-text {
-  background: none;
-  border: none;
-  padding: 0;
-  color: var(--clay-dark);
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: 0.95rem;
-  cursor: pointer;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-.btn-text:hover { color: var(--clay); }
-.expand { margin-top: 18px; padding-top: 18px; border-top: 1px solid rgba(46,36,26,0.12); }
-.expand[hidden] { display: none; }
-
-/* ==========================================================================
-   Partners / EDI / children's acknowledgment
-   ========================================================================== */
-.partners { position: relative; z-index: 1; padding: 60px 0 20px; }
-.partners > .wrap:first-child h2 { font-size: 2rem; }
-
-.partner-card {
-  max-width: var(--max);
-  margin: 0 auto 56px;
-  padding: 0 28px;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 36px;
-  align-items: start;
-}
-@media (max-width: 700px) {
-  .partner-card { grid-template-columns: 1fr; }
-  .partner-logo { width: 120px; }
-  .partner-logo.wide { width: 100%; max-width: 420px; }
-}
-.partner-copy h3 { font-size: 1.5rem; }
-
-.edi-block {
-  max-width: 780px;
-  margin: 0 auto 56px;
-  padding: 34px 28px;
-  background: var(--panel);
-  border-radius: var(--radius);
-}
-.edi-block h3 { font-size: 1.3rem; }
-
-.child-ack {
-  max-width: 700px;
-  margin: 0 auto 20px;
-  padding: 40px 28px;
-  background: var(--leaf-deep);
-  border-radius: var(--radius);
-  color: var(--paper);
-}
-.child-line { color: var(--paper); font-size: 1.05rem; }
-.child-call { font-weight: 700; }
-.script { font-family: var(--font-script); font-size: 1.5em; color: var(--gold-on-dark); }
-
-/* ==========================================================================
-   Listen (audio)
-   ========================================================================== */
-.listen { position: relative; z-index: 1; background: var(--paper-deep); padding: 70px 0; margin-top: 40px; }
-.listen-inner { max-width: 620px; }
-.listen h2 { font-size: 1.9rem; }
-
-.audio-placeholder {
-  margin-top: 24px;
-  padding: 22px 26px;
-  background: var(--panel);
-  border-radius: 999px;
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  width: fit-content;
-}
-.audio-bar { display: flex; align-items: center; gap: 4px; height: 28px; }
-.audio-bar span {
-  width: 4px;
-  border-radius: 2px;
-  background: var(--bay);
-  animation: wave 1.4s ease-in-out infinite;
-  opacity: 0.5;
-}
-.audio-bar span:nth-child(1) { height: 30%; animation-delay: 0s; }
-.audio-bar span:nth-child(2) { height: 70%; animation-delay: 0.1s; }
-.audio-bar span:nth-child(3) { height: 45%; animation-delay: 0.2s; }
-.audio-bar span:nth-child(4) { height: 90%; animation-delay: 0.3s; }
-.audio-bar span:nth-child(5) { height: 55%; animation-delay: 0.4s; }
-.audio-bar span:nth-child(6) { height: 75%; animation-delay: 0.5s; }
-.audio-bar span:nth-child(7) { height: 35%; animation-delay: 0.6s; }
-@keyframes wave { 0%, 100% { transform: scaleY(0.6); opacity: 0.4; } 50% { transform: scaleY(1); opacity: 0.9; } }
-.audio-label { font-weight: 700; font-size: 0.9rem; color: var(--ink-soft); }
-
-/* ==========================================================================
-   Gratitude
-   ========================================================================== */
-.gratitude { position: relative; z-index: 1; padding: 70px 0 90px; }
-.gratitude > .wrap:first-child h2 { font-size: 2.2rem; }
-
-.funder-primary {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 40px;
-  align-items: center;
-  padding: 40px;
-  background: var(--panel);
-  border: 2px solid var(--gold);
-  border-radius: 20px;
-  box-shadow: 0 8px 30px rgba(217, 164, 65, 0.18);
-  margin-bottom: 48px;
-}
-@media (max-width: 700px) { .funder-primary { grid-template-columns: 1fr; } .funder-logo { width: 140px; } }
-.funder-tag {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--clay-dark);
-  background: rgba(217, 164, 65, 0.22);
-  padding: 5px 12px;
-  border-radius: 999px;
-  margin-bottom: 10px;
-}
-.funder-copy h3 { font-size: 1.8rem; }
-
-.thanks-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-.thanks-card {
-  padding: 24px;
-  background: var(--panel);
-  border-radius: var(--radius);
-  border-top: 3px solid var(--leaf);
-  flex: 0 1 calc(33.333% - 14px);
-  min-width: 220px;
-}
-@media (max-width: 900px) { .thanks-card { flex-basis: calc(50% - 10px); } }
-@media (max-width: 560px) { .thanks-card { flex-basis: 100%; } }
-.thanks-card h4 { font-size: 1.05rem; margin-bottom: 0.4em; }
-.thanks-card p { font-size: 0.92rem; margin: 0; }
-
-/* ==========================================================================
-   Footer
-   ========================================================================== */
-.site-footer { position: relative; z-index: 1; padding: 34px 0 50px; text-align: center; }
-.footer-inner p { margin: 0; font-size: 0.9rem; }
-.footer-credit { color: var(--ink-soft); font-size: 0.9rem; margin-top: 4px !important; }
-.footer-sub { color: var(--ink-soft); margin-top: 4px !important; }
-
-/* ==========================================================================
-   Scroll reveal
-   ========================================================================== */
-.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
-.reveal.is-visible { opacity: 1; transform: translateY(0); }
-
-/* focus visibility */
-a:focus-visible, button:focus-visible {
-  outline: 3px solid var(--clay-dark);
-  outline-offset: 2px;
-}
-
-</style>
+<!-- Analytics: privacy-friendly, no cookies, no personal data collected.
+     Sign up free at https://www.goatcounter.com, then replace YOURCODE below
+     with the site code GoatCounter gives you (see README for full steps). -->
+<script data-goatcounter="https://YOURCODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
 
 <!-- the creek: a single meandering line that runs the length of the page,
      standing in for Strawberry Creek and for the corridor visitors walk through -->
-<svg class="creek" id="creek" viewBox="0 0 100 4000" preserveAspectRatio="none" aria-hidden="true">
-  <path id="creek-path" d="M 50 0 C 20 200 80 350 50 550 C 20 750 80 900 50 1100
+<svg class="creek" id="creek" width="1" height="1" viewBox="0 0 100 4000" preserveAspectRatio="none" aria-hidden="true">
+  <path id="creek-path" fill="none" stroke="#6D93A0" stroke-width="0.6" d="M 50 0 C 20 200 80 350 50 550 C 20 750 80 900 50 1100
     C 30 1300 75 1450 50 1650 C 25 1850 78 2000 50 2200
     C 22 2400 80 2550 50 2750 C 28 2950 76 3100 50 3300
     C 24 3500 79 3700 50 3900 L 50 4000" />
@@ -661,18 +71,21 @@ a:focus-visible, button:focus-visible {
     <div class="wrap hero-inner">
       <p class="eyebrow">A community mural at Berkeley Public Library, downtown branch</p>
       <h1 class="hero-title">Berkeley Is<span class="hero-title-sub">xučyun</span></h1>
-      <p class="hero-lede">A collaborative public artwork by Berkeley Youth Works artists, landscape
-        designer and muralist Hannah Pae, <a href="https://www.makamham.com/cafeohlone" target="_blank" rel="noopener">Café Ohlone</a>, and the Library's Equity, Diversity &amp;
-        Inclusion team. Funded by the <a href="https://bplf.org/" target="_blank" rel="noopener">Berkeley
-        Public Library Foundation</a>, it is installed in the third-floor corridor between the downtown
-        Central Library building and the Community Meeting Room.</p>
+      <p class="hero-lede">Berkeley Is... is a collaborative public artwork created by Berkeley
+        YouthWorks interns in partnership with landscape designer and muralist Hannah Pae,
+        <a href="https://www.makamham.com/cafeohlone" target="_blank" rel="noopener">Café Ohlone</a>,
+        and the Berkeley Public Library's Equity, Diversity &amp; Inclusion team.</p>
+      <p class="hero-lede">Funded by the <a href="https://bplf.org/" target="_blank" rel="noopener">Berkeley
+        Public Library Foundation</a>, the mural is installed in the third-floor corridor connecting the
+        Central Library to the Community Meeting Room. It serves as a visual land acknowledgment and an
+        exploration of Berkeley's past, present, and possible futures.</p>
       <div class="hero-actions">
         <a href="#walls" class="btn btn-primary">Walk through the mural</a>
         <a href="#gratitude" class="btn btn-ghost">See who made it possible</a>
       </div>
     </div>
     <div class="hero-frame">
-      <img src="images/hero-mural.JPG" alt="The full installed mural: a panoramic, map-like painting of Berkeley's landscapes, wildlife, waterways, and community, framed by a manzanita tree on each end.">
+      <img src="images/hero-mural.jpg" alt="The full installed mural: a panoramic, map-like painting of Berkeley's landscapes, wildlife, waterways, and community, framed by a manzanita tree on each end.">
     </div>
   </section>
 
@@ -722,25 +135,25 @@ a:focus-visible, button:focus-visible {
       <div class="process-gallery">
         <figure class="photo-card">
           <div class="photo-window">
-            <img src="images/process-1.jpg" alt="A student collage exercise combining a watercolor night sky, a sleeping cat, and cut-out lettering reading 'I am a cat some nights.'">
+            <img loading="lazy" src="images/process-1.jpg" alt="A student collage exercise combining a watercolor night sky, a sleeping cat, and cut-out lettering reading 'I am a cat some nights.'">
           </div>
           <figcaption>Practicing collage technique</figcaption>
         </figure>
         <figure class="photo-card">
           <div class="photo-window">
-            <img src="images/process-2.jpg" alt="Field notes and sketches from a walk through UC Berkeley, marking Sather Tower, Shattuck Avenue, and the route back to the Central Library.">
+            <img loading="lazy" src="images/process-2.jpg" alt="Field notes and sketches from a walk through UC Berkeley, marking Sather Tower, Shattuck Avenue, and the route back to the Central Library.">
           </div>
           <figcaption>Mapping a walk through UC Berkeley</figcaption>
         </figure>
         <figure class="photo-card">
           <div class="photo-window">
-            <img src="images/process-3.jpeg" alt="A marker sketch in progress on a studio table, surrounded by pens and workshop materials.">
+            <img loading="lazy" src="images/process-3.jpg" alt="A marker sketch in progress on a studio table, surrounded by pens and workshop materials.">
           </div>
           <figcaption>Turning field sketches into studies</figcaption>
         </figure>
         <figure class="photo-card">
           <div class="photo-window">
-            <img src="images/basket-patterns.jpg" alt="A reference chart of traditional woven basket patterns, numbered for study.">
+            <img loading="lazy" src="images/basket-patterns.jpg" alt="A reference chart of traditional woven basket patterns, numbered for study.">
           </div>
           <figcaption>Studying traditional basket-weaving patterns</figcaption>
         </figure>
@@ -772,7 +185,7 @@ a:focus-visible, button:focus-visible {
 
     <article class="wall-panel">
       <div class="wall-image half">
-        <img src="images/mural-wall-1.jpg" alt="Entrance wall of the mural: a manzanita tree in bloom, its red bark and green leaves filling the frame, with an orange and gray coyote curled beneath it.">
+        <img loading="lazy" src="images/mural-wall-1.jpg" alt="Entrance wall of the mural: a manzanita tree in bloom, its red bark and green leaves filling the frame, with an orange and gray coyote curled beneath it.">
       </div>
       <div class="wall-copy">
         <span class="wall-number">Part One</span>
@@ -785,7 +198,7 @@ a:focus-visible, button:focus-visible {
 
     <article class="wall-panel reverse">
       <div class="wall-image">
-        <img src="images/mural-wall-2.png" alt="Central map wall of the mural: streets and creeks of Berkeley rendered from above, with community members, salmon, quail, and Ohlone dwellings woven throughout.">
+        <img loading="lazy" src="images/mural-wall-2.jpg" alt="Central map wall of the mural: streets and creeks of Berkeley rendered from above, with community members, salmon, quail, and Ohlone dwellings woven throughout.">
       </div>
       <div class="wall-copy">
         <span class="wall-number">Part Two</span>
@@ -800,7 +213,7 @@ a:focus-visible, button:focus-visible {
 
     <article class="wall-panel">
       <div class="wall-image">
-        <img src="images/mural-wall-3.png" alt="Third wall of the mural: a collaged scene with a manzanita tree, a grizzly bear, monarch butterflies, hand-lettered poetry, and the mural's credits and gratitude to its funders.">
+        <img loading="lazy" src="images/mural-wall-3.jpg" alt="Third wall of the mural: a collaged scene with a manzanita tree, a grizzly bear, monarch butterflies, hand-lettered poetry, and the mural's credits and gratitude to its funders.">
       </div>
       <div class="wall-copy">
         <span class="wall-number">Part Three</span>
@@ -823,7 +236,7 @@ a:focus-visible, button:focus-visible {
     <div class="artist-card">
       <figure class="artist-photo">
         <div class="photo-window">
-          <img src="images/hannah-pae.jpg" alt="A hand-drawn figure sketch made during the mural project, of a person with a ponytail and bangs in a tank top.">
+          <img loading="lazy" src="images/hannah-pae.jpg" alt="A hand-drawn figure sketch made during the mural project, of a person with a ponytail and bangs in a tank top.">
         </div>
         <figcaption>A figure study, drawn during the project</figcaption>
       </figure>
@@ -844,11 +257,12 @@ a:focus-visible, button:focus-visible {
     <p class="artist-note">D'Aryn and Ariba asked not to be photographed for this page, so instead of
       portraits, their cards below lead with a piece of their own work from the mural.</p>
 
-    <div class="artist-card reverse">
+    <div class="artist-card stacked">
       <figure class="artist-photo full-image">
         <div class="photo-window">
-          <img src="images/daryn-brooks.png" alt="D'Aryn's field-trip sketch page from a walk through UC Berkeley, marking Sather Tower, Shattuck Avenue, and the Central Library.">
+          <img loading="lazy" src="images/daryn-brooks.jpg" alt="D'Aryn's hand-lettered poem, later inscribed across the top of the mural: 'That heart you have spilled out to the lands, coating the belt of earth even between the sand. It's about time we recognize your presence where you stand, not by unraveling your tribe, suppressed under our litter, but by acknowledging your significance.'">
         </div>
+        <figcaption>D'Aryn's poem, later lettered across the top of the mural</figcaption>
       </figure>
       <div class="artist-copy">
         <h3>D'Aryn Brooks Jr.</h3>
@@ -898,10 +312,10 @@ a:focus-visible, button:focus-visible {
       </div>
     </div>
 
-    <div class="artist-card">
+    <div class="artist-card stacked">
       <figure class="artist-photo full-image">
         <div class="photo-window">
-          <img src="images/ariba-library-sketch.jpg" alt="Ariba's marker drawing of the Berkeley Public Library's main branch, in green and blue, with the building's name lettered on the facade.">
+          <img loading="lazy" src="images/ariba-library-sketch.jpg" alt="Ariba's marker drawing of the Berkeley Public Library's main branch, in green and blue, with the building's name lettered on the facade.">
         </div>
       </figure>
       <div class="artist-copy">
@@ -968,21 +382,23 @@ a:focus-visible, button:focus-visible {
 
     <div class="partner-card">
       <figure class="partner-logo wide">
-        <img src="images/cafe-ohlone.jpg" alt="Hand-drawn sketch portraits of Louis Trevino and Vincent Medina of Café Ohlone, each labeled with their name.">
+        <img loading="lazy" src="images/cafe-ohlone.jpg" alt="Hand-drawn sketch portraits of Louis Trevino and Vincent Medina of Café Ohlone, each labeled with their name.">
       </figure>
       <div class="partner-copy">
         <h3><a href="https://www.makamham.com/cafeohlone" target="_blank" rel="noopener">Café Ohlone</a></h3>
         <p>Created by Vincent Medina and Louis Trevino, Café Ohlone is a cultural institution sharing
-          the culinary practices and culture of the Ohlone people, how food is made, where it comes
-          from, and where it's eaten. In 2017 the pair founded <em>mak-'amham</em> ("our food"), leading
-          cooking classes, gathering trips, community dinners, weekly language classes, and cultural
-          sessions. In 2018 they opened Café Ohlone at UC Berkeley, next to an academic department that
-          had once declared the Ohlone people extinct, a seasonal restaurant decorated with native
-          plants, napa basalt boulder seating, East Bay redwood tables, and abalone finery. They also
-          manage Ammatka Café at the Lawrence Hall of Science.</p>
-        <p>Medina and Trevino generously advised this mural, supporting the Library's ongoing
-          acknowledgment of harm and its work toward reconciliation between the City of Berkeley and the
-          Ohlone people.</p>
+          the culinary practices and culture of the Ohlone people: how food is made, where it comes
+          from, and where it is eaten. In 2017, the pair founded <em>mak-'amham</em> ("our food"),
+          leading cooking classes, gathering trips, community dinners, weekly language classes, and
+          cultural sessions. In 2018, they opened Café Ohlone at UC Berkeley, next to an academic
+          department that had once declared the Ohlone people extinct. The seasonal restaurant is
+          surrounded by native plants and incorporates napa basalt boulder seating, East Bay redwood
+          tables, and abalone finery. They also manage Ammatka Café at the Lawrence Hall of Science.</p>
+        <p>Medina and Trevino advised the development of <em>Berkeley Is</em>, helping ground the mural
+          in Ohlone perspectives, histories, and ongoing presence. Their collaboration supports the
+          Library's continuing work to acknowledge historical and institutional harms, deepen its
+          relationship with Ohlone community members, and consider the responsibilities that come with
+          recognizing that Berkeley is Ohlone land.</p>
       </div>
     </div>
 
@@ -991,11 +407,12 @@ a:focus-visible, button:focus-visible {
       <p>The EDI Division works across the organization so that equity isn't a separate initiative, but
         a core responsibility embedded in how the Library hires and supports staff, develops policy,
         designs services, builds collections, allocates resources, engages the community, and shapes its
-        public spaces, guided by the Library's Board-adopted harm statement, equity commitments,
-        strategic plan, and the Government Alliance on Race and Equity (GARE) framework.</p>
-      <p>It's the same understanding of the Library as public infrastructure, a civic institution where
-        people can see themselves represented, build skills and relationships, and help shape the shared
-        life of Berkeley, is what this mural was built to express.</p>
+        public spaces. This work is guided by the Library's Board-adopted harm statement, equity
+        commitments, strategic plan, and the Government Alliance on Race and Equity (GARE) framework.</p>
+      <p><em>Berkeley Is</em> grows from this same understanding of the Library as public infrastructure:
+        a civic institution where people can see themselves represented, build skills and relationships,
+        encounter the histories that shape our community, and help shape the shared life of Berkeley.
+        The mural makes that commitment visible in the Library's physical space.</p>
     </div>
 
     <div class="child-ack">
@@ -1039,7 +456,7 @@ a:focus-visible, button:focus-visible {
     <div class="wrap">
       <div class="funder-primary">
         <figure class="funder-logo">
-          <img src="images/bplf-logo.png" alt="Berkeley Public Library Foundation logo">
+          <img loading="lazy" src="images/bplf-logo.png" alt="Berkeley Public Library Foundation logo">
         </figure>
         <div class="funder-copy">
           <h3><a href="https://bplf.org/" target="_blank" rel="noopener">Berkeley Public Library Foundation</a></h3>
@@ -1084,9 +501,14 @@ a:focus-visible, button:focus-visible {
 
 <footer class="site-footer">
   <div class="wrap footer-inner">
-    <p>Berkeley Public Library, third-floor link corridor, Central Library</p>
-    <p class="footer-credit">Mural artwork by Hannah Pae, D'Aryn Brooks, and Ariba Talukder</p>
-    <p class="footer-sub">Built to share the story of this mural. Photos and audio added as the project is finished.</p>
+    <div class="footer-card">
+      <p>Berkeley Public Library-Central Branch</p>
+      <p>2090 Kittredge St, Berkeley, CA 94704, 3rd-floor link corridor to Community Room</p>
+      <p>510-981-6100</p>
+      <p class="footer-contact">Spot an error, or want to know more? Email <a href="mailto:dpenning@berkeleyca.gov">dpenning@berkeleyca.gov</a></p>
+      <p class="footer-credit">Mural artwork by Hannah Pae, D'Aryn Brooks, and Ariba Talukder</p>
+      <p class="footer-sub">Built to share the story of this mural.</p>
+    </div>
   </div>
 </footer>
 
@@ -1115,97 +537,6 @@ a:focus-visible, button:focus-visible {
   </defs>
 </svg>
 
-<script>
-// Mobile nav toggle
-const navToggle = document.getElementById('nav-toggle');
-const siteNav = document.getElementById('site-nav');
-if (navToggle && siteNav) {
-  navToggle.addEventListener('click', () => {
-    const isOpen = siteNav.classList.toggle('is-open');
-    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    navToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
-  });
-  // close the menu after choosing a link
-  siteNav.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      siteNav.classList.remove('is-open');
-      navToggle.setAttribute('aria-expanded', 'false');
-      navToggle.setAttribute('aria-label', 'Open menu');
-    });
-  });
-  // close if a click lands outside the header
-  document.addEventListener('click', (e) => {
-    if (!siteNav.classList.contains('is-open')) return;
-    if (siteNav.contains(e.target) || navToggle.contains(e.target)) return;
-    siteNav.classList.remove('is-open');
-    navToggle.setAttribute('aria-expanded', 'false');
-    navToggle.setAttribute('aria-label', 'Open menu');
-  });
-}
-
-// Expand/collapse full artist reflections
-document.querySelectorAll('[data-toggle]').forEach((btn) => {
-  btn.addEventListener('click', () => {
-    const target = document.getElementById(btn.dataset.toggle);
-    if (!target) return;
-    const isHidden = target.hasAttribute('hidden');
-    if (isHidden) {
-      target.removeAttribute('hidden');
-      btn.textContent = btn.textContent.replace('Read', 'Hide');
-      btn.setAttribute('aria-expanded', 'true');
-    } else {
-      target.setAttribute('hidden', '');
-      btn.textContent = btn.textContent.replace('Hide', 'Read');
-      btn.setAttribute('aria-expanded', 'false');
-    }
-  });
-});
-
-// Scroll reveal for major sections
-const revealTargets = document.querySelectorAll(
-  '.about-inner, .process, .wall-panel, .artist-card, .partner-card, .edi-block, .child-ack, .funder-primary, .thanks-card'
-);
-revealTargets.forEach((el) => el.classList.add('reveal'));
-
-if ('IntersectionObserver' in window) {
-  const io = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          io.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.12 }
-  );
-  revealTargets.forEach((el) => io.observe(el));
-} else {
-  revealTargets.forEach((el) => el.classList.add('is-visible'));
-}
-
-// Stretch the creek path to match full document height
-function sizeCreek() {
-  const creek = document.getElementById('creek');
-  if (!creek) return;
-  const height = document.body.scrollHeight;
-  creek.setAttribute('viewBox', `0 0 100 ${height}`);
-  const path = document.getElementById('creek-path');
-  if (path) {
-    const steps = 8;
-    let d = 'M 50 0';
-    for (let i = 1; i <= steps; i++) {
-      const y = (height / steps) * i;
-      const x = i % 2 === 0 ? 22 : 78;
-      const cy1 = y - (height / steps) * 0.65;
-      d += ` C ${x} ${cy1} ${100 - x} ${y - (height / steps) * 0.25} 50 ${y}`;
-    }
-    path.setAttribute('d', d);
-  }
-}
-window.addEventListener('load', sizeCreek);
-window.addEventListener('resize', sizeCreek);
-
-</script>
+<script src="script.js"></script>
 </body>
 </html>

@@ -15,11 +15,11 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Berkeley Is: A Community Mural at Berkeley Public Library">
 <meta property="og:description" content="The story of the Berkeley Public Library Community Mural: its process, its artists, and everyone who made it possible.">
-<meta property="og:image" content="images/mural-wall-2.jpg">
+<meta property="og:image" content="images/mural-wall-2.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Berkeley Is: A Community Mural at Berkeley Public Library">
 <meta name="twitter:description" content="The story of the Berkeley Public Library Community Mural: its process, its artists, and everyone who made it possible.">
-<meta name="twitter:image" content="images/mural-wall-2.jpg">
+<meta name="twitter:image" content="images/mural-wall-2.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -436,12 +436,6 @@ figure.placeholder-frame.artist-photo { aspect-ratio: 3/4; }
 }
 .artist-card.reverse { direction: rtl; }
 .artist-card.reverse > * { direction: ltr; }
-
-/* stacked: image on top, full width, copy below */
-.artist-card.stacked { grid-template-columns: 1fr; }
-.artist-card.stacked .artist-photo { margin: 0 auto 8px; }
-.artist-card.stacked .artist-photo.full-image { width: auto; }
-.artist-card.stacked .artist-photo.full-image .photo-window { margin: 0 auto; }
 @media (max-width: 780px) {
   .artist-card, .artist-card.reverse { grid-template-columns: 1fr; direction: ltr; }
   .artist-photo { width: 100%; }
@@ -490,9 +484,6 @@ figure.placeholder-frame.artist-photo { aspect-ratio: 3/4; }
   gap: 36px;
   align-items: start;
 }
-/* stacked: logo/image on top, full width, copy below */
-.partner-card.stacked { grid-template-columns: 1fr; }
-.partner-card.stacked .partner-logo { margin: 0 auto 8px; }
 @media (max-width: 700px) {
   .partner-card { grid-template-columns: 1fr; }
   .partner-logo { width: 120px; }
@@ -611,20 +602,10 @@ figure.placeholder-frame.artist-photo { aspect-ratio: 3/4; }
 /* ==========================================================================
    Footer
    ========================================================================== */
-.site-footer { position: relative; z-index: 1; padding: 34px 0 50px; text-align: center; background: var(--clay); }
-.footer-card {
-  display: inline-block;
-  max-width: 560px;
-  margin: 0 auto;
-  padding: 26px 36px;
-  background: var(--panel);
-  border-radius: 0;
-  box-shadow: 0 10px 28px rgba(46, 36, 26, 0.22);
-}
-.footer-inner p { margin: 0; font-size: 0.8rem; color: #000; }
-.footer-contact { margin-top: 8px !important; }
-.footer-credit { color: #000; font-size: 0.8rem; margin-top: 10px !important; padding-top: 10px; border-top: 1px solid rgba(46,36,26,0.12); }
-.footer-sub { color: #000; margin-top: 4px !important; }
+.site-footer { position: relative; z-index: 1; padding: 34px 0 50px; text-align: center; }
+.footer-inner p { margin: 0; font-size: 0.9rem; }
+.footer-credit { color: var(--ink-soft); font-size: 0.9rem; margin-top: 4px !important; }
+.footer-sub { color: var(--ink-soft); margin-top: 4px !important; }
 
 /* ==========================================================================
    Scroll reveal
@@ -639,18 +620,13 @@ a:focus-visible, button:focus-visible {
 }
 
 </style>
-
-<!-- Analytics: privacy-friendly, no cookies, no personal data collected.
-     Sign up free at https://www.goatcounter.com, then replace YOURCODE below
-     with the site code GoatCounter gives you (see README for full steps). -->
-<script data-goatcounter="https://YOURCODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
 
 <!-- the creek: a single meandering line that runs the length of the page,
      standing in for Strawberry Creek and for the corridor visitors walk through -->
-<svg class="creek" id="creek" width="1" height="1" viewBox="0 0 100 4000" preserveAspectRatio="none" aria-hidden="true">
-  <path id="creek-path" fill="none" stroke="#6D93A0" stroke-width="0.6" d="M 50 0 C 20 200 80 350 50 550 C 20 750 80 900 50 1100
+<svg class="creek" id="creek" viewBox="0 0 100 4000" preserveAspectRatio="none" aria-hidden="true">
+  <path id="creek-path" d="M 50 0 C 20 200 80 350 50 550 C 20 750 80 900 50 1100
     C 30 1300 75 1450 50 1650 C 25 1850 78 2000 50 2200
     C 22 2400 80 2550 50 2750 C 28 2950 76 3100 50 3300
     C 24 3500 79 3700 50 3900 L 50 4000" />
@@ -685,14 +661,11 @@ a:focus-visible, button:focus-visible {
     <div class="wrap hero-inner">
       <p class="eyebrow">A community mural at Berkeley Public Library, downtown branch</p>
       <h1 class="hero-title">Berkeley Is<span class="hero-title-sub">xučyun</span></h1>
-      <p class="hero-lede">Berkeley Is... is a collaborative public artwork created by Berkeley
-        YouthWorks interns in partnership with landscape designer and muralist Hannah Pae,
-        <a href="https://www.makamham.com/cafeohlone" target="_blank" rel="noopener">Café Ohlone</a>,
-        and the Berkeley Public Library's Equity, Diversity &amp; Inclusion team.</p>
-      <p class="hero-lede">Funded by the <a href="https://bplf.org/" target="_blank" rel="noopener">Berkeley
-        Public Library Foundation</a>, the mural is installed in the third-floor corridor connecting the
-        Central Library to the Community Meeting Room. It serves as a visual land acknowledgment and an
-        exploration of Berkeley's past, present, and possible futures.</p>
+      <p class="hero-lede">A collaborative public artwork by Berkeley Youth Works artists, landscape
+        designer and muralist Hannah Pae, <a href="https://www.makamham.com/cafeohlone" target="_blank" rel="noopener">Café Ohlone</a>, and the Library's Equity, Diversity &amp;
+        Inclusion team. Funded by the <a href="https://bplf.org/" target="_blank" rel="noopener">Berkeley
+        Public Library Foundation</a>, it is installed in the third-floor corridor between the downtown
+        Central Library building and the Community Meeting Room.</p>
       <div class="hero-actions">
         <a href="#walls" class="btn btn-primary">Walk through the mural</a>
         <a href="#gratitude" class="btn btn-ghost">See who made it possible</a>
@@ -749,25 +722,25 @@ a:focus-visible, button:focus-visible {
       <div class="process-gallery">
         <figure class="photo-card">
           <div class="photo-window">
-            <img loading="lazy" src="images/process-1.jpg" alt="A student collage exercise combining a watercolor night sky, a sleeping cat, and cut-out lettering reading 'I am a cat some nights.'">
+            <img src="images/process-1.jpg" alt="A student collage exercise combining a watercolor night sky, a sleeping cat, and cut-out lettering reading 'I am a cat some nights.'">
           </div>
           <figcaption>Practicing collage technique</figcaption>
         </figure>
         <figure class="photo-card">
           <div class="photo-window">
-            <img loading="lazy" src="images/process-2.jpg" alt="Field notes and sketches from a walk through UC Berkeley, marking Sather Tower, Shattuck Avenue, and the route back to the Central Library.">
+            <img src="images/process-2.jpg" alt="Field notes and sketches from a walk through UC Berkeley, marking Sather Tower, Shattuck Avenue, and the route back to the Central Library.">
           </div>
           <figcaption>Mapping a walk through UC Berkeley</figcaption>
         </figure>
         <figure class="photo-card">
           <div class="photo-window">
-            <img loading="lazy" src="images/process-3.jpg" alt="A marker sketch in progress on a studio table, surrounded by pens and workshop materials.">
+            <img src="images/process-3.jpeg" alt="A marker sketch in progress on a studio table, surrounded by pens and workshop materials.">
           </div>
           <figcaption>Turning field sketches into studies</figcaption>
         </figure>
         <figure class="photo-card">
           <div class="photo-window">
-            <img loading="lazy" src="images/basket-patterns.jpg" alt="A reference chart of traditional woven basket patterns, numbered for study.">
+            <img src="images/basket-patterns.jpg" alt="A reference chart of traditional woven basket patterns, numbered for study.">
           </div>
           <figcaption>Studying traditional basket-weaving patterns</figcaption>
         </figure>
@@ -799,7 +772,7 @@ a:focus-visible, button:focus-visible {
 
     <article class="wall-panel">
       <div class="wall-image half">
-        <img loading="lazy" src="images/mural-wall-1.jpg" alt="Entrance wall of the mural: a manzanita tree in bloom, its red bark and green leaves filling the frame, with an orange and gray coyote curled beneath it.">
+        <img src="images/mural-wall-1.jpg" alt="Entrance wall of the mural: a manzanita tree in bloom, its red bark and green leaves filling the frame, with an orange and gray coyote curled beneath it.">
       </div>
       <div class="wall-copy">
         <span class="wall-number">Part One</span>
@@ -812,7 +785,7 @@ a:focus-visible, button:focus-visible {
 
     <article class="wall-panel reverse">
       <div class="wall-image">
-        <img loading="lazy" src="images/mural-wall-2.jpg" alt="Central map wall of the mural: streets and creeks of Berkeley rendered from above, with community members, salmon, quail, and Ohlone dwellings woven throughout.">
+        <img src="images/mural-wall-2.png" alt="Central map wall of the mural: streets and creeks of Berkeley rendered from above, with community members, salmon, quail, and Ohlone dwellings woven throughout.">
       </div>
       <div class="wall-copy">
         <span class="wall-number">Part Two</span>
@@ -827,7 +800,7 @@ a:focus-visible, button:focus-visible {
 
     <article class="wall-panel">
       <div class="wall-image">
-        <img loading="lazy" src="images/mural-wall-3.jpg" alt="Third wall of the mural: a collaged scene with a manzanita tree, a grizzly bear, monarch butterflies, hand-lettered poetry, and the mural's credits and gratitude to its funders.">
+        <img src="images/mural-wall-3.png" alt="Third wall of the mural: a collaged scene with a manzanita tree, a grizzly bear, monarch butterflies, hand-lettered poetry, and the mural's credits and gratitude to its funders.">
       </div>
       <div class="wall-copy">
         <span class="wall-number">Part Three</span>
@@ -850,7 +823,7 @@ a:focus-visible, button:focus-visible {
     <div class="artist-card">
       <figure class="artist-photo">
         <div class="photo-window">
-          <img loading="lazy" src="images/hannah-pae.jpg" alt="A hand-drawn figure sketch made during the mural project, of a person with a ponytail and bangs in a tank top.">
+          <img src="images/hannah-pae.jpg" alt="A hand-drawn figure sketch made during the mural project, of a person with a ponytail and bangs in a tank top.">
         </div>
         <figcaption>A figure study, drawn during the project</figcaption>
       </figure>
@@ -871,12 +844,11 @@ a:focus-visible, button:focus-visible {
     <p class="artist-note">D'Aryn and Ariba asked not to be photographed for this page, so instead of
       portraits, their cards below lead with a piece of their own work from the mural.</p>
 
-    <div class="artist-card stacked">
+    <div class="artist-card reverse">
       <figure class="artist-photo full-image">
         <div class="photo-window">
-          <img loading="lazy" src="images/daryn-brooks.jpg" alt="D'Aryn's hand-lettered poem, later inscribed across the top of the mural: 'That heart you have spilled out to the lands, coating the belt of earth even between the sand. It's about time we recognize your presence where you stand, not by unraveling your tribe, suppressed under our litter, but by acknowledging your significance.'">
+          <img src="images/daryn-brooks.png" alt="D'Aryn's field-trip sketch page from a walk through UC Berkeley, marking Sather Tower, Shattuck Avenue, and the Central Library.">
         </div>
-        <figcaption>D'Aryn's poem, later lettered across the top of the mural</figcaption>
       </figure>
       <div class="artist-copy">
         <h3>D'Aryn Brooks Jr.</h3>
@@ -926,10 +898,10 @@ a:focus-visible, button:focus-visible {
       </div>
     </div>
 
-    <div class="artist-card stacked">
+    <div class="artist-card">
       <figure class="artist-photo full-image">
         <div class="photo-window">
-          <img loading="lazy" src="images/ariba-library-sketch.jpg" alt="Ariba's marker drawing of the Berkeley Public Library's main branch, in green and blue, with the building's name lettered on the facade.">
+          <img src="images/ariba-library-sketch.jpg" alt="Ariba's marker drawing of the Berkeley Public Library's main branch, in green and blue, with the building's name lettered on the facade.">
         </div>
       </figure>
       <div class="artist-copy">
@@ -996,23 +968,21 @@ a:focus-visible, button:focus-visible {
 
     <div class="partner-card">
       <figure class="partner-logo wide">
-        <img loading="lazy" src="images/cafe-ohlone.jpg" alt="Hand-drawn sketch portraits of Louis Trevino and Vincent Medina of Café Ohlone, each labeled with their name.">
+        <img src="images/cafe-ohlone.jpg" alt="Hand-drawn sketch portraits of Louis Trevino and Vincent Medina of Café Ohlone, each labeled with their name.">
       </figure>
       <div class="partner-copy">
         <h3><a href="https://www.makamham.com/cafeohlone" target="_blank" rel="noopener">Café Ohlone</a></h3>
         <p>Created by Vincent Medina and Louis Trevino, Café Ohlone is a cultural institution sharing
-          the culinary practices and culture of the Ohlone people: how food is made, where it comes
-          from, and where it is eaten. In 2017, the pair founded <em>mak-'amham</em> ("our food"),
-          leading cooking classes, gathering trips, community dinners, weekly language classes, and
-          cultural sessions. In 2018, they opened Café Ohlone at UC Berkeley, next to an academic
-          department that had once declared the Ohlone people extinct. The seasonal restaurant is
-          surrounded by native plants and incorporates napa basalt boulder seating, East Bay redwood
-          tables, and abalone finery. They also manage Ammatka Café at the Lawrence Hall of Science.</p>
-        <p>Medina and Trevino advised the development of <em>Berkeley Is</em>, helping ground the mural
-          in Ohlone perspectives, histories, and ongoing presence. Their collaboration supports the
-          Library's continuing work to acknowledge historical and institutional harms, deepen its
-          relationship with Ohlone community members, and consider the responsibilities that come with
-          recognizing that Berkeley is Ohlone land.</p>
+          the culinary practices and culture of the Ohlone people, how food is made, where it comes
+          from, and where it's eaten. In 2017 the pair founded <em>mak-'amham</em> ("our food"), leading
+          cooking classes, gathering trips, community dinners, weekly language classes, and cultural
+          sessions. In 2018 they opened Café Ohlone at UC Berkeley, next to an academic department that
+          had once declared the Ohlone people extinct, a seasonal restaurant decorated with native
+          plants, napa basalt boulder seating, East Bay redwood tables, and abalone finery. They also
+          manage Ammatka Café at the Lawrence Hall of Science.</p>
+        <p>Medina and Trevino generously advised this mural, supporting the Library's ongoing
+          acknowledgment of harm and its work toward reconciliation between the City of Berkeley and the
+          Ohlone people.</p>
       </div>
     </div>
 
@@ -1021,12 +991,11 @@ a:focus-visible, button:focus-visible {
       <p>The EDI Division works across the organization so that equity isn't a separate initiative, but
         a core responsibility embedded in how the Library hires and supports staff, develops policy,
         designs services, builds collections, allocates resources, engages the community, and shapes its
-        public spaces. This work is guided by the Library's Board-adopted harm statement, equity
-        commitments, strategic plan, and the Government Alliance on Race and Equity (GARE) framework.</p>
-      <p><em>Berkeley Is</em> grows from this same understanding of the Library as public infrastructure:
-        a civic institution where people can see themselves represented, build skills and relationships,
-        encounter the histories that shape our community, and help shape the shared life of Berkeley.
-        The mural makes that commitment visible in the Library's physical space.</p>
+        public spaces, guided by the Library's Board-adopted harm statement, equity commitments,
+        strategic plan, and the Government Alliance on Race and Equity (GARE) framework.</p>
+      <p>It's the same understanding of the Library as public infrastructure, a civic institution where
+        people can see themselves represented, build skills and relationships, and help shape the shared
+        life of Berkeley, is what this mural was built to express.</p>
     </div>
 
     <div class="child-ack">
@@ -1070,7 +1039,7 @@ a:focus-visible, button:focus-visible {
     <div class="wrap">
       <div class="funder-primary">
         <figure class="funder-logo">
-          <img loading="lazy" src="images/bplf-logo.png" alt="Berkeley Public Library Foundation logo">
+          <img src="images/bplf-logo.png" alt="Berkeley Public Library Foundation logo">
         </figure>
         <div class="funder-copy">
           <h3><a href="https://bplf.org/" target="_blank" rel="noopener">Berkeley Public Library Foundation</a></h3>
@@ -1115,14 +1084,9 @@ a:focus-visible, button:focus-visible {
 
 <footer class="site-footer">
   <div class="wrap footer-inner">
-    <div class="footer-card">
-      <p>Berkeley Public Library-Central Branch</p>
-      <p>2090 Kittredge St, Berkeley, CA 94704, 3rd-floor link corridor to Community Room</p>
-      <p>510-981-6100</p>
-      <p class="footer-contact">Spot an error, or want to know more? Email <a href="mailto:dpenning@berkeleyca.gov">dpenning@berkeleyca.gov</a></p>
-      <p class="footer-credit">Mural artwork by Hannah Pae, D'Aryn Brooks, and Ariba Talukder</p>
-      <p class="footer-sub">Built to share the story of this mural.</p>
-    </div>
+    <p>Berkeley Public Library, third-floor link corridor, Central Library</p>
+    <p class="footer-credit">Mural artwork by Hannah Pae, D'Aryn Brooks, and Ariba Talukder</p>
+    <p class="footer-sub">Built to share the story of this mural. Photos and audio added as the project is finished.</p>
   </div>
 </footer>
 
