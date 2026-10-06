@@ -305,7 +305,7 @@ figure.placeholder-frame.artist-photo { aspect-ratio: 3/4; }
 
 .partner-logo { width: 160px; flex-shrink: 0; margin: 0; }
 .partner-logo img { display: block; width: 100%; height: auto; border-radius: var(--radius); border: 1px solid rgba(46,36,26,0.08); }
-.partner-logo.wide { width: 300px; max-width: 100%; }
+.partner-logo.wide { width: 680px; max-width: 100%; }
 
 .inline-artwork { margin: 0 0 22px; border-radius: var(--radius); overflow: hidden; border: 1px solid rgba(46,36,26,0.08); }
 .inline-artwork img { display: block; width: 100%; height: auto; }
@@ -409,18 +409,6 @@ figure.placeholder-frame.artist-photo { aspect-ratio: 3/4; }
 }
 .artist-card.reverse { direction: rtl; }
 .artist-card.reverse > * { direction: ltr; }
-
-/* stacked: image on top, full width, copy below */
-.artist-card.stacked { grid-template-columns: 1fr; }
-.artist-card.stacked .artist-photo { margin: 0 auto 8px; }
-.artist-card.stacked .artist-photo.full-image { width: auto; }
-.artist-card.stacked .artist-photo.full-image .photo-window { margin: 0 auto; }
-
-/* youth artwork: shown large, uncropped, at its natural proportions */
-.artist-card.stacked .artist-photo.full-image { width: 100%; max-width: 540px; margin: 0 auto 8px; }
-.artist-card.stacked .artist-photo.full-image .photo-window { height: auto; display: flex; justify-content: center; }
-.artist-card.stacked .artist-photo.full-image img { width: auto; max-width: 100%; height: auto; max-height: 430px; }
-.artist-card.stacked .artist-photo.full-image figcaption { text-align: center; }
 @media (max-width: 780px) {
   .artist-card, .artist-card.reverse { grid-template-columns: 1fr; direction: ltr; }
   .artist-photo { width: 100%; }
@@ -469,9 +457,6 @@ figure.placeholder-frame.artist-photo { aspect-ratio: 3/4; }
   gap: 36px;
   align-items: start;
 }
-/* stacked: logo/image on top, full width, copy below */
-.partner-card.stacked { grid-template-columns: 1fr; }
-.partner-card.stacked .partner-logo { margin: 0 auto 8px; }
 @media (max-width: 700px) {
   .partner-card { grid-template-columns: 1fr; }
   .partner-logo { width: 120px; }
@@ -590,20 +575,10 @@ figure.placeholder-frame.artist-photo { aspect-ratio: 3/4; }
 /* ==========================================================================
    Footer
    ========================================================================== */
-.site-footer { position: relative; z-index: 1; padding: 34px 0 50px; text-align: center; background: var(--clay); }
-.footer-card {
-  display: inline-block;
-  max-width: 560px;
-  margin: 0 auto;
-  padding: 26px 36px;
-  background: var(--panel);
-  border-radius: 0;
-  box-shadow: 0 10px 28px rgba(46, 36, 26, 0.22);
-}
-.footer-inner p { margin: 0; font-size: 0.8rem; color: #000; }
-.footer-contact { margin-top: 8px !important; }
-.footer-credit { color: #000; font-size: 0.8rem; margin-top: 10px !important; padding-top: 10px; border-top: 1px solid rgba(46,36,26,0.12); }
-.footer-sub { color: #000; margin-top: 4px !important; }
+.site-footer { position: relative; z-index: 1; padding: 34px 0 50px; text-align: center; }
+.footer-inner p { margin: 0; font-size: 0.9rem; }
+.footer-credit { color: var(--ink-soft); font-size: 0.9rem; margin-top: 4px !important; }
+.footer-sub { color: var(--ink-soft); margin-top: 4px !important; }
 
 /* ==========================================================================
    Scroll reveal
