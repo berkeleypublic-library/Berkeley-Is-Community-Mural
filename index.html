@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Berkeley Is: A Community Mural at Berkeley Public Library</title>
+<meta name="description" content="The story of the Berkeley Public Library Community Mural: its process, its artists, and everyone who made it possible.">
+
+<!-- favicon: a small manzanita leaf, in the mural's own palette -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
+
+<!-- social preview: the central map wall (Part Two) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Berkeley Is: A Community Mural at Berkeley Public Library">
+<meta property="og:description" content="The story of the Berkeley Public Library Community Mural: its process, its artists, and everyone who made it possible.">
+<meta property="og:image" content="images/mural-wall-2.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Berkeley Is: A Community Mural at Berkeley Public Library">
+<meta name="twitter:description" content="The story of the Berkeley Public Library Community Mural: its process, its artists, and everyone who made it possible.">
+<meta name="twitter:image" content="images/mural-wall-2.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Public+Sans:wght@400;500;600;700&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- the creek: a single meandering line that runs the length of the page,
+     standing in for Strawberry Creek and for the corridor visitors walk through -->
+<svg class="creek" id="creek" viewBox="0 0 100 4000" preserveAspectRatio="none" aria-hidden="true">
+  <path id="creek-path" d="M 50 0 C 20 200 80 350 50 550 C 20 750 80 900 50 1100
+    C 30 1300 75 1450 50 1650 C 25 1850 78 2000 50 2200
+    C 22 2400 80 2550 50 2750 C 28 2950 76 3100 50 3300
+    C 24 3500 79 3700 50 3900 L 50 4000" />
+</svg>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">
+      <img src="images/bpl-logo.png" alt="Berkeley Public Library logo" class="brand-logo">
+      <span>Berkeley Is</span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="site-nav" id="site-nav">
+      <a href="#process">Process</a>
+      <a href="#walls">The Mural</a>
+      <a href="#artists">Artists</a>
+      <a href="#partners">Partners</a>
+      <a href="#listen" class="nav-highlight">Listen</a>
+      <a href="#gratitude" class="nav-cta">Gratitude</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <p class="eyebrow">A community mural at Berkeley Public Library, downtown branch</p>
+      <h1 class="hero-title">Berkeley Is<span class="hero-title-sub">xučyun</span></h1>
+      <p class="hero-lede">A collaborative public artwork by Berkeley Youth Works artists, landscape
+        designer and muralist Hannah Pae, <a href="https://www.makamham.com/cafeohlone" target="_blank" rel="noopener">Café Ohlone</a>, and the Library's Equity, Diversity &amp;
+        Inclusion team. Funded by the <a href="https://bplf.org/" target="_blank" rel="noopener">Berkeley
+        Public Library Foundation</a>, it is installed in the third-floor corridor between the downtown
+        Central Library building and the Community Meeting Room.</p>
+      <div class="hero-actions">
+        <a href="#walls" class="btn btn-primary">Walk through the mural</a>
+        <a href="#gratitude" class="btn btn-ghost">See who made it possible</a>
+      </div>
+    </div>
+    <div class="hero-frame">
+      <img src="images/hero-mural.jpg" alt="The full installed mural: a panoramic, map-like painting of Berkeley's landscapes, wildlife, waterways, and community, framed by a manzanita tree on each end.">
+    </div>
+  </section>
+
+  <!-- LAND ACKNOWLEDGMENT -->
+  <section class="acknowledgment">
+    <div class="wrap ack-inner">
+      <span class="eyebrow eyebrow-light">Land acknowledgment</span>
+      <p class="ack-text">Berkeley Public Library buildings are built on the territory of
+        <strong>xučyun</strong> <span class="say">(hooch-yoon)</span>, within the homeland of the
+        <strong>Chochenyo</strong> <span class="say">(cho-chen-yo)</span> speaking <strong>Ohlone</strong>
+        <span class="say">(oh-low-nee)</span> people. We acknowledge and honor the Ohlone people, who have
+        lived in Berkeley and throughout the East Bay since time immemorial. The Library recognizes that
+        Berkeley residents have and continue to benefit from the use and occupation of unceded stolen land,
+        and we pledge to recognize the permanence and the rich contributions that the Ohlone people continue
+        to bring to the City of Berkeley and throughout the East Bay.</p>
+      <p class="ack-credit">A living document, co-written by Ohlone cultural leaders Vincent Medina and
+        Louis Trevino together with the Berkeley Public Library.</p>
+    </div>
+  </section>
+
+  <!-- ABOUT / WHAT THE MURAL REPRESENTS -->
+  <section class="about">
+    <div class="wrap about-inner">
+      <span class="eyebrow">What the mural represents</span>
+      <h2>Honoring the past, designing the future</h2>
+      <p>Together, we explored Berkeley's landscapes, histories, cultures, and communities to create a
+        work that honors the past while imagining the future. Through research, interviews, archival
+        materials, sketching, photography, and shared storytelling, the mural weaves together Indigenous
+        knowledge, neighborhood histories, everyday moments, and the creativity of young people who call
+        Berkeley home.</p>
+      <p>As visitors move through the corridor, they're invited to slow down, look closely, and consider
+        the many stories that shape Berkeley, including their own. It celebrates the library as a place
+        where community memory is preserved, new ideas take root, and everyone has a role in shaping the
+        future of Berkeley.</p>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process" id="process">
+    <div class="wrap">
+      <span class="eyebrow">The process</span>
+      <h2>Field trips, archives, and a lot of sketching</h2>
+      <p class="section-lede">Before a single wall was painted, the team walked Berkeley's streets,
+        toured its murals, sat with Ohlone knowledge-keepers, and spent hours in the Library's own
+        history room.</p>
+
+      <div class="process-gallery">
+        <figure class="photo-card">
+          <div class="photo-window">
+            <img src="images/process-1.jpg" alt="A student collage exercise combining a watercolor night sky, a sleeping cat, and cut-out lettering reading 'I am a cat some nights.'">
+          </div>
+          <figcaption>Practicing collage technique</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <div class="photo-window">
+            <img src="images/process-2.jpg" alt="Field notes and sketches from a walk through UC Berkeley, marking Sather Tower, Shattuck Avenue, and the route back to the Central Library.">
+          </div>
+          <figcaption>Mapping a walk through UC Berkeley</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <div class="photo-window">
+            <img src="images/process-3.jpg" alt="A marker sketch in progress on a studio table, surrounded by pens and workshop materials.">
+          </div>
+          <figcaption>Turning field sketches into studies</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <div class="photo-window">
+            <img src="images/basket-patterns.jpg" alt="A reference chart of traditional woven basket patterns, numbered for study.">
+          </div>
+          <figcaption>Studying traditional basket-weaving patterns</figcaption>
+        </figure>
+      </div>
+
+      <div class="pull-quotes">
+        <blockquote class="pull-quote">
+          <p>"Going around Berkeley and noticing things that I overlooked excitedly sparked many ideas
+            for the mural."</p>
+          <cite>D'Aryn Brooks, youth artist</cite>
+        </blockquote>
+        <blockquote class="pull-quote">
+          <p>"We spent time in the history room, visited important spots to sketch them, and took a
+            mural tour to get inspiration from the artistic side of Berkeley."</p>
+          <cite>Ariba Talukder, youth artist</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE THREE WALLS -->
+  <section class="walls" id="walls">
+    <div class="wrap">
+      <span class="eyebrow">Walk the corridor</span>
+      <h2>The mural, wall by wall</h2>
+      <p class="section-lede">The mural unfolds across three connected walls as you move through the
+        link corridor toward the Community Meeting Room.</p>
+    </div>
+
+    <article class="wall-panel">
+      <div class="wall-image half">
+        <img src="images/mural-wall-1.jpg" alt="Entrance wall of the mural: a manzanita tree in bloom, its red bark and green leaves filling the frame, with an orange and gray coyote curled beneath it.">
+      </div>
+      <div class="wall-copy">
+        <span class="wall-number">Part One</span>
+        <h3>The entrance</h3>
+        <p>Manzanita trees with green leaves frame the doorway. An orange and gray coyote curls along
+          the bottom of the wall, its head on the right and its body continuing to the left, forming an
+          endless cycle. Above the door: <em>"Berkeley Is,"</em> and its Chochenyo translation below.</p>
+      </div>
+    </article>
+
+    <article class="wall-panel reverse">
+      <div class="wall-image">
+        <img src="images/mural-wall-2.jpg" alt="Central map wall of the mural: streets and creeks of Berkeley rendered from above, with community members, salmon, quail, and Ohlone dwellings woven throughout.">
+      </div>
+      <div class="wall-copy">
+        <span class="wall-number">Part Two</span>
+        <h3>A map of Berkeley</h3>
+        <p>The large central wall is arranged like a map, with community members, wildlife, and native
+          plants throughout. Otters, grizzly bears, a salamander, quail, and red ants share the wall
+          with red baskets, Ohlone dwellings, and tule boats. Landmarks include the Campanile, Berkeley
+          High School, the Library, the Clock Tower, the hills, and a slice of the bay. A rising sun and
+          a poem crown the whole scene.</p>
+      </div>
+    </article>
+
+    <article class="wall-panel">
+      <div class="wall-image">
+        <img src="images/mural-wall-3.jpg" alt="Third wall of the mural: a collaged scene with a manzanita tree, a grizzly bear, monarch butterflies, hand-lettered poetry, and the mural's credits and gratitude to its funders.">
+      </div>
+      <div class="wall-copy">
+        <span class="wall-number">Part Three</span>
+        <h3>Continuing the story</h3>
+        <p>A more collaged wall carries the manzanita trees forward, alongside a grizzly bear and
+          California quail, a black-and-white basket, and butterflies circling a torch topped with
+          another poem. Ohlone huts, Berkeley High, the Library, and tracings of community members
+          tie this wall back to the rest of the corridor.</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- ARTISTS -->
+  <section class="artists" id="artists">
+    <div class="wrap">
+      <span class="eyebrow">Who made it</span>
+      <h2>Meet the artists</h2>
+    </div>
+
+    <div class="artist-card">
+      <figure class="artist-photo">
+        <div class="photo-window">
+          <img src="images/hannah-pae.jpg" alt="A hand-drawn figure sketch made during the mural project, of a person with a ponytail and bangs in a tank top.">
+        </div>
+        <figcaption>A figure study, drawn during the project</figcaption>
+      </figure>
+      <div class="artist-copy">
+        <h3>Hannah Pae</h3>
+        <p class="artist-role">Muralist &amp; landscape designer, Los Angeles</p>
+        <p>Hannah Pae is an LA-based artist and designer who has advocated for and contributed to many
+          projects throughout California, including co-designing the outdoor space of Café Ohlone on
+          the UC Berkeley campus. She's a landscape designer at Terremoto Landscape, a community land
+          steward at the Burn Scar Test Plot in Los Angeles, co-founder of SSI YA GI, a community of
+          Korean culinary culture, and a committee member of <a href="https://www.gyopo.us/" target="_blank" rel="noopener">GYOPO</a>, a Los Angeles-based nonprofit
+          supporting diasporic Korean arts and culture.</p>
+        <p>Her passion for ecology and community runs through everything she makes: this mural, her
+          landscape work, and her collaborations with other cultural stewards like Café Ohlone.</p>
+      </div>
+    </div>
+
+    <p class="artist-note">D'Aryn and Ariba asked not to be photographed for this page, so instead of
+      portraits, their cards below lead with a piece of their own work from the mural.</p>
+
+    <div class="artist-card reverse">
+      <figure class="artist-photo full-image">
+        <div class="photo-window">
+          <img src="images/process-2.jpg" alt="D'Aryn's field-trip sketch page from a walk through UC Berkeley, marking Sather Tower, Shattuck Avenue, and the Central Library.">
+        </div>
+      </figure>
+      <div class="artist-copy">
+        <h3>D'Aryn Brooks Jr.</h3>
+        <p class="artist-role">Youth artist, junior at Berkeley High School</p>
+        <p>D'Aryn came to a second mural project unsure his motivation would hold: some weeks he draws
+          every day, others not at all. Field trips around Berkeley and time in the Library's history
+          room changed that. He was struck by how much political history the archive held, much of it
+          never digitized, and by how little-known Ohlone history is, "when they are the ones who built
+          the foundation of this city."</p>
+        <p>Two pieces stayed with him most: a drawing of Berkeley High's courtyard, tied to his own
+          middle school graduation, and a sketch made on the spot at the UC Berkeley clock tower,
+          looking out over the bay.</p>
+        <button class="btn-text" data-toggle="daryn-more" aria-expanded="false">Read D'Aryn's full reflection</button>
+        <div class="expand" id="daryn-more" hidden>
+          <p>My name is D'Aryn Brooks Jr. I'm a junior at Berkeley high school and I have a variety of
+            hobbies and interests that have shaped my life, tigers and big cats especially, the Amur
+            tiger most of all. I also listen to a wide range of music, from rap and soul to jazz, rock,
+            and metal. My interest in art has taken up a great part of my life, even if it isn't always
+            consistent.</p>
+          <p>Growing up, my motivation for art has come and gone in waves. So being assigned another
+            mural project after last summer's felt intimidating at first. I expected it to be boring,
+            but the planning activities sparked my inspiration to draw again.</p>
+          <p>One trip took us around Telegraph Avenue to look at other murals. My group noticed the
+            smallest details, colors, expressions, scale, even the obstacles like power boxes, and
+            how those details carried meaning. We used that idea instead of avoiding it: rather than
+            dodging obstacles on our own wall, we built them in.</p>
+          <p>On a later trip to the UC Berkeley campus, a place I'd been to plenty of times, I was still
+            struck by the history behind the plant life and biodiversity, a sense of collectiveness in
+            the city I'd overlooked. It made me want to pay closer attention to Berkeley, whether I'm in
+            a park or just walking around noticing what's happening.</p>
+          <p>Inside the library, my biggest interest became the political history and community of
+            Berkeley, much of it hidden from the internet, including political groups that went by
+            different names so they wouldn't get caught. Learning about Ohlone culture through the
+            archive's films and books was just as striking. It's a shame how little people know about
+            a culture that built the foundation of this city and the whole bay area.</p>
+          <p>Two pieces from the weeks of drawing mean the most to me. The first is a drawing of Berkeley
+            High's courtyard and auditorium, a place with real history in the city, and personal
+            history for me, since it hosted my middle school graduation. Getting the scale and depth of
+            the buildings right took a lot of trial and error, and it still isn't perfect, but I still
+            like it. The second is a sketch from a field trip to UC Berkeley's clock tower, looking down
+            the street that divides campus with a view of the bay behind it. I was surprised how
+            motivated I got just from that view alone.</p>
+          <p>Drawing for this mural has been enjoyable. I'm grateful I got to take part in it, learn more
+            about what to do with my skills, and see the work go up somewhere the public will actually
+            see it. I never would have believed my art would end up on this mural.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="artist-card">
+      <figure class="artist-photo full-image">
+        <div class="photo-window">
+          <img src="images/ariba-library-sketch.jpg" alt="Ariba's marker drawing of the Berkeley Public Library's main branch, in green and blue, with the building's name lettered on the facade.">
+        </div>
+      </figure>
+      <div class="artist-copy">
+        <h3>Ariba Talukder</h3>
+        <p class="artist-role">Youth artist, senior at Berkeley High School</p>
+        <p>Ariba joined as an EDI Intern through the YouthWorks program. The team researched Berkeley's
+          history in the Library's history room, sketched important spots around the city, took a mural
+          tour for inspiration, and interviewed community members about life in Berkeley. A field trip
+          to the Lawrence Hall of Science brought the group face to face with Vincent Medina and Louis
+          Trevino of Café Ohlone, who taught a few words of Chochenyo and shared Ohlone plant knowledge
+          and history.</p>
+        <p>She spent the most time on the Sather Gate drawing, mapped out carefully for accurate,
+          symmetrical proportions, which she sees as representing both UC Berkeley's history and the
+          protests that have long taken place in front of it, on land that remains the ancestral
+          homeland of the Ohlone people.</p>
+        <button class="btn-text" data-toggle="ariba-more" aria-expanded="false">Read Ariba's full reflection</button>
+        <div class="expand" id="ariba-more" hidden>
+          <p>I am a senior at Berkeley High School. I became an EDI Intern through the YouthWorks program
+            and was selected as one of the interns to help create this mural. Throughout the project, we
+            researched Berkeley's history in the library's history room, visited important spots around
+            the city to sketch them, took a mural tour for inspiration, and interviewed community
+            members about their perspectives on living in Berkeley.</p>
+          <p>This internship felt different from any other at the Berkeley Public Library. I didn't
+            expect to be so involved in creating the mural, let alone get to draw some of its key
+            pieces, and the research work before the drawing began was just as engaging.</p>
+          <p>What I liked most were the field trips: walking around Berkeley, stopping to sketch the
+            places we wanted to include. On one trip, we went to the Lawrence Hall of Science and met
+            Vincent Medina and Louis Trevino, and learned about Ohlone culture from an indigenous
+            perspective, a few words of Chochenyo, native plants, and a deeper understanding of Ohlone
+            history.</p>
+          <p>The experience was educational both for the history and for what I learned about my own
+            art. We drew for a week straight, and consistent practice actually improved my skills. I
+            got to understand my own artistic process and figure out which techniques work for me. I
+            don't plan to pursue art as a career, but I want to keep it as something I enjoy and keep
+            sharing, even as a hobby rather than a profession. This is the first big art project I've
+            been part of, and I'm grateful for the opportunity.</p>
+          <p>As an Asian American, spending time in the history room was meaningful, learning about the
+            contributions Asian communities have made to Berkeley, even where historical records don't
+            always represent every group. The room still holds documents and archival photos that
+            recognize the struggles and contributions of many communities, and I think it represents
+            Berkeley's history and culture well.</p>
+          <p>I spent the most time on the Sather Gate drawing. Unlike some of my other pieces, I wanted
+            this one accurate and symmetrical, so I mapped it carefully, simplifying some smaller
+            details, which is part of my usual style. I'd sketched Sather Gate before, in my own
+            notebook, during our field trips with Hannah. To me it's the most recognizable part of UC
+            Berkeley and represents the university as a whole. It stands on the ancestral homeland of
+            the Ohlone people, with Strawberry Creek running through campus nearby, and it's long been a
+            place where Berkeley's people gather to protest and speak up. I gave the color palette less
+            attention here; the structure's actual color is already so recognizable that it didn't need
+            much interpretation.</p>
+          <p>There's a lot to learn here, and I'm grateful to have interned at the Library again, this
+            time as part of something even bigger.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERS -->
+  <section class="partners" id="partners">
+    <div class="wrap">
+      <span class="eyebrow">In partnership with</span>
+      <h2>Knowledge-keepers and collaborators</h2>
+    </div>
+
+    <div class="partner-card">
+      <figure class="partner-logo wide">
+        <img src="images/cafe-ohlone.jpg" alt="Hand-drawn sketch portraits of Louis Trevino and Vincent Medina of Café Ohlone, each labeled with their name.">
+      </figure>
+      <div class="partner-copy">
+        <h3><a href="https://www.makamham.com/cafeohlone" target="_blank" rel="noopener">Café Ohlone</a></h3>
+        <p>Created by Vincent Medina and Louis Trevino, Café Ohlone is a cultural institution sharing
+          the culinary practices and culture of the Ohlone people, how food is made, where it comes
+          from, and where it's eaten. In 2017 the pair founded <em>mak-'amham</em> ("our food"), leading
+          cooking classes, gathering trips, community dinners, weekly language classes, and cultural
+          sessions. In 2018 they opened Café Ohlone at UC Berkeley, next to an academic department that
+          had once declared the Ohlone people extinct, a seasonal restaurant decorated with native
+          plants, napa basalt boulder seating, East Bay redwood tables, and abalone finery. They also
+          manage Ammatka Café at the Lawrence Hall of Science.</p>
+        <p>Medina and Trevino generously advised this mural, supporting the Library's ongoing
+          acknowledgment of harm and its work toward reconciliation between the City of Berkeley and the
+          Ohlone people.</p>
+      </div>
+    </div>
+
+    <div class="edi-block">
+      <h3>Equity, Diversity &amp; Inclusion at Berkeley Public Library</h3>
+      <p>The EDI Division works across the organization so that equity isn't a separate initiative, but
+        a core responsibility embedded in how the Library hires and supports staff, develops policy,
+        designs services, builds collections, allocates resources, engages the community, and shapes its
+        public spaces, guided by the Library's Board-adopted harm statement, equity commitments,
+        strategic plan, and the Government Alliance on Race and Equity (GARE) framework.</p>
+      <p>It's the same understanding of the Library as public infrastructure, a civic institution where
+        people can see themselves represented, build skills and relationships, and help shape the shared
+        life of Berkeley, is what this mural was built to express.</p>
+    </div>
+
+    <div class="child-ack">
+      <span class="eyebrow eyebrow-light">A children's land acknowledgment</span>
+      <p class="child-line"><span class="script">horše ṭuuxi!</span> Hello in Chochenyo, my family's
+        Ohlone language that has always been spoken here in the East Bay, including Berkeley!</p>
+      <p class="child-line"><span class="script">kaanak raakat Amaya</span>, my name is Amaya.</p>
+      <p class="child-line">Before we get started with our fun program today, we want to take time to
+        recognize that the land we're standing on has been lived in for thousands and thousands of years
+        by our Ohlone people, and we speak a beautiful language named Chochenyo. Ohlone children, like
+        myself, continue to speak our language and keep our culture close because of our strong elders
+        and ancestors.</p>
+      <p class="child-line child-call">Can you say "Ohlone"? Now let's say Chochenyo! Now let's say the
+        Ohlone name for Berkeley: xučyun! Great job, friends, now let's start our program!</p>
+    </div>
+  </section>
+
+  <!-- AUDIO -->
+  <section class="listen" id="listen">
+    <div class="wrap listen-inner">
+      <span class="eyebrow eyebrow-light">Listen</span>
+      <h2>Audio guide: coming soon</h2>
+      <p>A spoken walkthrough of the mural, in the artists' and knowledge-keepers' own words, is in
+        production. Check back soon to listen along as you walk the corridor.</p>
+      <div class="audio-placeholder" aria-label="Audio player placeholder, coming soon">
+        <div class="audio-bar">
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <span class="audio-label">Recording in progress</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- GRATITUDE -->
+  <section class="gratitude" id="gratitude">
+    <div class="wrap">
+      <span class="eyebrow eyebrow-light">With gratitude</span>
+      <h2>Made possible by</h2>
+    </div>
+
+    <div class="wrap">
+      <div class="funder-primary">
+        <figure class="funder-logo">
+          <img src="images/bplf-logo.png" alt="Berkeley Public Library Foundation logo">
+        </figure>
+        <div class="funder-copy">
+          <h3><a href="https://bplf.org/" target="_blank" rel="noopener">Berkeley Public Library Foundation</a></h3>
+          <p>The Berkeley Public Library Foundation amplifies public investment to make a great public
+            library extraordinary. It raises funds for the initiatives other parts of the Library's
+            budget don't cover, advocating for diversity within the Library, and supporting literacy
+            projects, building improvements, and librarian-led innovations that bring the people of
+            Berkeley together.</p>
+          <p>This mural reflects the same values at the heart of the Foundation's mission: making the
+            Library extraordinary, and shining a light on the diversity and variety of our city. Its
+            support made this entire project, the interns, the artist, the installation, possible.</p>
+        </div>
+      </div>
+
+      <div class="thanks-grid">
+        <div class="thanks-card">
+          <h4><a href="https://berkeleyca.gov/community-recreation/community-services/youthworks" target="_blank" rel="noopener">YouthWorks</a></h4>
+          <p>For placing D'Aryn Brooks and Ariba Talukder as EDI Interns and making this their project
+            to shape.</p>
+        </div>
+        <div class="thanks-card">
+          <h4><a href="https://www.makamham.com/cafeohlone" target="_blank" rel="noopener">Café Ohlone</a></h4>
+          <p>Vincent Medina and Louis Trevino, for their guidance, knowledge, and generosity throughout.</p>
+        </div>
+        <div class="thanks-card">
+          <h4>Hannah Pae</h4>
+          <p>For lending her eye, her ecology, and her hand to every wall of this corridor.</p>
+        </div>
+        <div class="thanks-card">
+          <h4>The Berkeley community</h4>
+          <p>Everyone interviewed, everyone who shared a story, and everyone who will walk this corridor.</p>
+        </div>
+        <div class="thanks-card">
+          <h4><a href="https://www.berkeleylibraryfriends.org/" target="_blank" rel="noopener">Friends of the Library</a></h4>
+          <p>For providing bagels and pizza to keep the youth fueled for art making.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>Berkeley Public Library, third-floor link corridor, Central Library</p>
+    <p class="footer-credit">Mural artwork by Hannah Pae, D'Aryn Brooks, and Ariba Talukder</p>
+    <p class="footer-sub">Built to share the story of this mural. Photos and audio added as the project is finished.</p>
+  </div>
+</footer>
+
+<!-- reusable SVG motifs, in mural palette -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="motif-manzanita">
+      <path d="M100 190 C 90 150 95 110 100 70" stroke="var(--clay)" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <path d="M100 130 C 80 120 65 100 60 80" stroke="var(--clay)" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <path d="M100 100 C 120 90 135 70 140 50" stroke="var(--clay)" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <ellipse cx="55" cy="75" rx="14" ry="8" fill="var(--leaf)" transform="rotate(-30 55 75)"/>
+      <ellipse cx="145" cy="45" rx="14" ry="8" fill="var(--leaf)" transform="rotate(25 145 45)"/>
+      <ellipse cx="95" cy="60" rx="14" ry="8" fill="var(--leaf)" transform="rotate(-5 95 60)"/>
+      <circle cx="98" cy="68" r="5" fill="var(--gold)"/>
+    </g>
+    <g id="motif-coyote">
+      <path d="M20 100 C 40 60 90 55 120 75 C 140 60 165 65 175 85 L 165 95 C 155 88 145 90 140 98
+        C 130 110 100 112 80 105 C 60 118 35 118 20 100 Z" fill="none" stroke="var(--clay)" stroke-width="4"/>
+      <circle cx="150" cy="80" r="3" fill="var(--ink)"/>
+    </g>
+    <g id="motif-quail">
+      <ellipse cx="80" cy="90" rx="45" ry="30" fill="none" stroke="var(--bay)" stroke-width="4"/>
+      <path d="M65 62 C 60 45 50 40 55 30" stroke="var(--bay)" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <circle cx="120" cy="75" r="3" fill="var(--ink)"/>
+    </g>
+  </defs>
+</svg>
+
+<script src="script.js"></script>
+</body>
+</html>
